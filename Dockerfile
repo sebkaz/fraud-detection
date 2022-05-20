@@ -1,10 +1,9 @@
 # jupyter notebook without ubuntu
 
 FROM python:3.8-slim
-RUN pip install --upgrade pip
-RUN pip install --upgrade setuptools
-RUN pip install jupyter pandas numpy matplotlib sklearn 
-RUN pip install xgboost imbalanced-learn Advanced-scorecard-builder
+RUN pip install --upgrade pip setuptools
+RUN pip --no-cache-dir install ipython jupyter pandas numpy matplotlib sklearn 
+RUN pip --no-cache-dir install xgboost imbalanced-learn Advanced-scorecard-builder
 
 COPY . /notebooks/
 # Configuring access to Jupyter
