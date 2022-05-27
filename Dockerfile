@@ -2,9 +2,12 @@
 
 FROM python:3.8-slim
 RUN python -m pip install --upgrade pip setuptools
-RUN python -m pip --no-cache-dir install ipython jupyter pandas numpy matplotlib sklearn 
-RUN python -m pip --no-cache-dir install seaborn
-RUN python -m pip --no-cache-dir install xgboost imbalanced-learn Advanced-scorecard-builder
+RUN python -m pip --no-cache-dir install ipython jupyter
+RUN python -m pip --no-cache-dir install tensorflow keras
+RUN python -m pip --no-cache-dir install xgboost lightgbm
+RUN python -m pip --no-cache-dir install fastcluster hdbscan tslearn
+RUN python -m pip --no-cache-dir install sklearn scipy seaborn matplotlib
+RUN python -m pip --no-cache-dir install imbalanced-learn Advanced-scorecard-builder
 
 COPY . /notebooks/
 # Configuring access to Jupyter

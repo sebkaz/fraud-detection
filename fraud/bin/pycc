@@ -1,0 +1,3 @@
+#!/Users/air/Documents/GitHub/fraud-detection/fraud/bin/python3.9
+from numba.pycc import main
+main()
